@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Title from "./Title";
 import Slider from "react-slick";
+import { carouselData } from "../../public/data/data";
 
 const Carousel = () => {
   const settings = {
@@ -38,42 +39,17 @@ const Carousel = () => {
         </div>
       </div>
       <Slider {...settings}>
-        <div>
-          <div className="mt-48 container mx-auto text-white flex flex-col items-start gap-y-10">
-            <Title className="text-6xl">Fast Food Restaurant</Title>
-            <p className="text-sm w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              modi, recusandae blanditiis voluptas, sed ipsum magni deleniti cum
-              incidunt soluta velit quod ratione fuga temporibus eligendi
-              delectus atque laudantium impedit.
-            </p>
-            <button className="btn-primary">Order Now</button>
-          </div>
-        </div>
-        <div>
-          <div className="mt-48 container mx-auto text-white flex flex-col items-start gap-y-10">
-            <Title className="text-6xl">Fast Food Restaurant</Title>
-            <p className="text-sm w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              modi, recusandae blanditiis voluptas, sed ipsum magni deleniti cum
-              incidunt soluta velit quod ratione fuga temporibus eligendi
-              delectus atque laudantium impedit.
-            </p>
-            <button className="btn-primary">Order Now</button>
-          </div>
-        </div>
-        <div>
-          <div className="mt-48 container mx-auto text-white flex flex-col items-start gap-y-10">
-            <Title className="text-6xl">Fast Food Restaurant</Title>
-            <p className="text-sm w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              modi, recusandae blanditiis voluptas, sed ipsum magni deleniti cum
-              incidunt soluta velit quod ratione fuga temporibus eligendi
-              delectus atque laudantium impedit.
-            </p>
-            <button className="btn-primary">Order Now</button>
-          </div>
-        </div>
+        {carouselData.map((data, index) => {
+          return (
+            <div key={index}>
+              <div className="mt-48 container mx-auto text-white flex flex-col items-start gap-y-10">
+                <Title className="text-6xl">{data.title}</Title>
+                <p className="text-sm w-1/2">{data.description}</p>
+                <button className="btn-primary">Order Now</button>
+              </div>
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );
