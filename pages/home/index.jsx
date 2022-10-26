@@ -1,5 +1,6 @@
 import React from "react";
 import Campaigns from "../../components/layout/Campaigns";
+import MenuWrapper from "../../components/menu/MenuWrapper";
 import Carousel from "../../components/ui/Carousel";
 
 const Index = () => {
@@ -7,6 +8,7 @@ const Index = () => {
     <div>
       <Carousel />
       <Campaigns />
+      <MenuWrapper />
     </div>
   );
 };
