@@ -3,7 +3,7 @@ import Logo from "../ui/Logo";
 import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Search from "../ui/Search";
+import Search from "../../components/search/Search";
 import { useRouter } from "next/router";
 
 const Header = () => {
