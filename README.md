@@ -25,8 +25,6 @@ FoodLog is a food ordering application.
 * Validation using Yup.
 * Creating an API.
 
-Please make sure to update tests as appropriate.
-
 ## Contributors
 * Onurcan Sever
 * Design credits to [Feane](https://html.design/demo/feane/).
