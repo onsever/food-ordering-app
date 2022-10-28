@@ -30,3 +30,18 @@ export const inputs = [
     placeholder: "Select a Date",
   },
 ];
+
+export const loginInputs = [
+  {
+    id: 1,
+    name: "email",
+    type: "email",
+    placeholder: "Your Email Address",
+  },
+  {
+    id: 2,
+    name: "password",
+    type: "password",
+    placeholder: "Your Password",
+  },
+];
