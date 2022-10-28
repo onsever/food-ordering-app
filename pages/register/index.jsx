@@ -4,7 +4,6 @@ import Input from "../../components/input/Input";
 import { registerInputs } from "../../public/data/inputs";
 import useInput from "../../hooks/useInput";
 import { registerSchema } from "../../schemas/schemas";
-import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
 
 const Index = () => {
