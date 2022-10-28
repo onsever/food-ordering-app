@@ -11,3 +11,14 @@ export const bookingSchema = Yup.object({
   persons: Yup.string().required("Number of persons is required."),
   date: Yup.string().required("Date of the booking is required."),
 });
+
+export const loginSchema = Yup.object({
+  email: Yup.string().required("Email is required.").email("Email is invalid."),
+  password: Yup.string()
+    .required("Password is required.")
+    .min(8, "Password is too short - should be 8 characters minimum.")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+      "Password must contain at least one uppercase, one lowercase, one number and one special character."
+    ),
+});
