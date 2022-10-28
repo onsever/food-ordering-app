@@ -1,13 +1,13 @@
 import React from "react";
 import Input from "../input/Input";
 import Title from "../ui/Title";
-import { inputs } from "../../public/data/inputs";
+import { bookingInputs } from "../../public/data/inputs";
 import useInput from "../../hooks/useInput";
 import { bookingSchema } from "../../schemas/schemas";
 
 const Booking = () => {
   const { formik, validatedInputs } = useInput(
-    inputs,
+    bookingInputs,
     bookingSchema,
     async (values, actions) => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
