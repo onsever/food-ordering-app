@@ -1,5 +1,7 @@
 import React from "react";
 import Title from "../ui/Title";
+import { GoLocation } from "react-icons/go";
+import { BiEnvelope, BiPhoneCall } from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -9,18 +11,18 @@ const Footer = () => {
           <div className="md:flex-1">
             <Title className="text-3xl">Contact Us</Title>
             <div className="flex flex-col gap-y-2 mt-3">
-              <div>
-                <i className="fa fa-map-marker"></i>
+              <div className="flex items-center justify-center">
+                <GoLocation />
                 <span className="inline-block ml-2">Location</span>
               </div>
-              <div>
-                <i className="fa fa-phone"></i>
+              <div className="flex items-center justify-center">
+                <BiPhoneCall />
                 <span className="inline-block ml-2">
                   Call +1 (647) 450-7913
                 </span>
               </div>
-              <div>
-                <i className="fa fa-envelope"></i>
+              <div className="flex items-center justify-center">
+                <BiEnvelope />
                 <span className="inline-block ml-2">onsever@icloud.com</span>
               </div>
             </div>
