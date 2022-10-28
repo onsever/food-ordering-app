@@ -1,4 +1,4 @@
-export const inputs = [
+export const bookingInputs = [
   {
     id: 1,
     name: "fullName",
@@ -43,5 +43,32 @@ export const loginInputs = [
     name: "password",
     type: "password",
     placeholder: "Your Password",
+  },
+];
+
+export const registerInputs = [
+  {
+    id: 1,
+    name: "fullName",
+    type: "text",
+    placeholder: "Your Full Name",
+  },
+  {
+    id: 2,
+    name: "email",
+    type: "email",
+    placeholder: "Your Email Address",
+  },
+  {
+    id: 3,
+    name: "password",
+    type: "password",
+    placeholder: "Your Password",
+  },
+  {
+    id: 4,
+    name: "confirmPassword",
+    type: "password",
+    placeholder: "Your Password Again",
   },
 ];
