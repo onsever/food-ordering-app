@@ -5,16 +5,18 @@ import Campaigns from "../../components/campaign/Campaigns";
 import MenuWrapper from "../../components/menu/MenuWrapper";
 import Carousel from "../../components/ui/Carousel";
 import Booking from "../../components/booking/Booking";
+import Feedback from "../../components/feedback/Feedback";
 
 const Index = () => {
   return (
-    <div>
+    <>
       <Carousel />
       <Campaigns />
       <MenuWrapper />
       <About />
       <Booking />
-    </div>
+      <Feedback />
+    </>
   );
 };
 
