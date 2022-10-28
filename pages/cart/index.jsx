@@ -25,7 +25,7 @@ const Index = () => {
           </thead>
           <tbody>
             <tr className="bg-secondary hover:bg-primary transition-all">
-              <td className="py-4 px-6 font-medium whitespace-nowrap flex items-center gap-x-1 justify-center">
+              <td className="py-4 px-6 font-medium whitespace-nowrap flex items-center gap-x-1 justify-center hover:text-white">
                 <Image
                   src="/images/f1.png"
                   alt="Product Image"
@@ -34,11 +34,15 @@ const Index = () => {
                 />
                 <span>Good Pizza</span>
               </td>
-              <td className="py-4 px-6 font-medium whitespace-nowrap">
+              <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
                 <span>Ketchup, Onions</span>
               </td>
-              <td className="py-4 px-6 font-medium whitespace-nowrap">$20</td>
-              <td className="py-4 px-6 font-medium whitespace-nowrap">1</td>
+              <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
+                $20
+              </td>
+              <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
+                1
+              </td>
             </tr>
           </tbody>
         </table>
