@@ -87,3 +87,45 @@ export const adminInputs = [
     placeholder: "Your Password",
   },
 ];
+
+export const accountInputs = [
+  {
+    id: 1,
+    name: "fullName",
+    type: "text",
+    placeholder: "Full Name",
+  },
+  {
+    id: 2,
+    name: "phoneNumber",
+    type: "tel",
+    placeholder: "Phone Number",
+  },
+  {
+    id: 3,
+    name: "email",
+    type: "email",
+    placeholder: "Email Address",
+  },
+  {
+    id: 4,
+    name: "address",
+    type: "text",
+    placeholder: "Address",
+  },
+];
+
+export const updatePasswordInputs = [
+  {
+    id: 1,
+    name: "password",
+    type: "password",
+    placeholder: "Password",
+  },
+  {
+    id: 2,
+    name: "confirmPassword",
+    type: "password",
+    placeholder: "Password Again",
+  },
+];
