@@ -2,6 +2,9 @@
 
 FoodLog is a food ordering application.
 
+## Live Demo Link
+https://foodlog.vercel.app/
+
 ## Technologies Used
 
 * React
