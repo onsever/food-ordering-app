@@ -22,7 +22,7 @@ FoodLog is a food ordering application.
 * Route guarding.
 * CRUD operations for foods using the admin panel.
 * Table that contains all users' orders (including filtering).
-* Validation using Yup.
+* Form validation using Formik and Yup.
 * Creating an API.
 
 ## Contributors
