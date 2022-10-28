@@ -4,7 +4,7 @@ import MenuItem from "./MenuItem";
 
 const MenuWrapper = () => {
   return (
-    <div className="container mx-auto mb-16">
+    <div className="container mx-auto mb-16" id="menu">
       <div className="flex flex-col items-center">
         <Title className="text-[3rem]">Our Menu</Title>
       </div>

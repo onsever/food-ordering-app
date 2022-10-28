@@ -16,7 +16,7 @@ const Booking = () => {
   );
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12" id="booking">
       <Title className="text-[2.5rem] mb-4">Book A Table</Title>
       <div className="flex justify-between gap-10 flex-wrap-reverse">
         <form className="lg:flex-1 w-full" onSubmit={formik.handleSubmit}>
