@@ -17,6 +17,10 @@ body {
   @apply text-white px-[30px] py-[8px] rounded-3xl bg-primary cursor-pointer hover:opacity-70 transition-all;
 }
 
+.btn-secondary {
+  @apply text-white px-[30px] py-[8px] rounded-3xl bg-secondary cursor-pointer hover:opacity-70 transition-all;
+}
+
 .slick-dots {
   @apply !flex justify-start w-full;
 }
