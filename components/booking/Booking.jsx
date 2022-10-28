@@ -2,15 +2,18 @@ import React from "react";
 import Input from "../input/Input";
 import Title from "../ui/Title";
 import { inputs } from "../../public/data/inputs";
-import InputHandler from "../../handlers/InputHandler";
+import useInput from "../../hooks/useInput";
+import { bookingSchema } from "../../schemas/schemas";
 
 const Booking = () => {
-  const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
-  };
-
-  const { formik } = InputHandler(inputs, onSubmit);
+  const { formik, validatedInputs } = useInput(
+    inputs,
+    bookingSchema,
+    async (values, actions) => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      actions.resetForm();
+    }
+  );
 
   return (
     <div className="container mx-auto py-12">
@@ -18,13 +21,13 @@ const Booking = () => {
       <div className="flex justify-between gap-10 flex-wrap-reverse">
         <form className="lg:flex-1 w-full" onSubmit={formik.handleSubmit}>
           <div className="flex flex-col gap-y-5">
-            {inputs.map((input, index) => {
+            {validatedInputs.map((input) => {
               return (
                 <Input
                   key={input.id}
                   {...input}
                   onChange={formik.handleChange}
-                  value={formik.values[Object.keys(formik.values)[index]]}
+                  onBlur={formik.handleBlur}
                 />
               );
             })}
@@ -48,3 +51,7 @@ const Booking = () => {
 };
 
 export default Booking;
+
+/*
+formik.values[Object.keys(formik.values)[index]]
+*/

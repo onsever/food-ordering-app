@@ -1,7 +1,7 @@
 import React from "react";
 
 const Input = (props) => {
-  const { placeholder, ...input } = props;
+  const { id, placeholder, error, touched, ...input } = props;
   return (
     <div className="w-full">
       <label className="relative block cursor-text w-full">
@@ -9,7 +9,9 @@ const Input = (props) => {
           {...input}
           className={`${
             input.type === "date" ? "pt-0" : "pt-4"
-          } h-14 w-full border border-primary outline-none px-4 peer $`}
+          } h-14 w-full border ${
+            touched && error ? "border-danger" : "border-primary"
+          } outline-none px-4 peer $`}
           required
         />
         {input.type === "date" ? (
@@ -20,6 +22,7 @@ const Input = (props) => {
           </span>
         )}
       </label>
+      {touched && <span className="text-xs text-danger">{error}</span>}
     </div>
   );
 };
