@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div
       className={`h-[5.5rem] z-50 relative w-full ${
-        router.pathname === "/" ? "bg-transparent" : "bg-secondary !fixed"
+        router.pathname === "/" ? "bg-transparent" : "bg-secondary"
       }`}
     >
       <div className="container mx-auto text-white flex justify-between items-center h-full">
@@ -53,18 +53,18 @@ const Header = () => {
           )}
         </nav>
         <div className="flex gap-x-4 items-center">
+          <Link href="/login">
+            <FaUserAlt className="hover:text-primary transition-all cursor-pointer" />
+          </Link>
           <a href="#">
-            <FaUserAlt className="hover:text-primary transition-all" />
-          </a>
-          <a href="#">
-            <FaShoppingCart className="hover:text-primary transition-all" />
+            <FaShoppingCart className="hover:text-primary transition-all cursor-pointer" />
           </a>
           <button onClick={() => setIsSearchModal(true)}>
             <FaSearch className="hover:text-primary transition-all" />
           </button>
-          <a href="#" className="md:inline-block hidden">
+          <Link href="#" className="md:inline-block hidden cursor-pointer">
             <button className="btn-primary">Order Online</button>
-          </a>
+          </Link>
           <button
             className="sm:hidden inline-block"
             onClick={() => setIsMenuModal(true)}
