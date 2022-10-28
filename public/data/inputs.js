@@ -72,3 +72,18 @@ export const registerInputs = [
     placeholder: "Your Password Again",
   },
 ];
+
+export const adminInputs = [
+  {
+    id: 1,
+    name: "username",
+    type: "text",
+    placeholder: "Your Username",
+  },
+  {
+    id: 2,
+    name: "password",
+    type: "password",
+    placeholder: "Your Password",
+  },
+];
