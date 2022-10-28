@@ -36,7 +36,7 @@ const Index = () => {
           })}
         </div>
         <div className="flex flex-col gap-y-3 mt-6 w-full">
-          <button className="btn-primary">Register</button>
+          <button type="submit" className="btn-primary">Register</button>
           <Link href="/login">
             <span className="text-sm underline cursor-pointer text-gray-600">
               Do you have an account? Login.

@@ -37,7 +37,7 @@ const Index = () => {
           })}
         </div>
         <div className="flex flex-col gap-y-3 mt-6 w-full">
-          <button className="btn-primary">Login</button>
+          <button type="submit" className="btn-primary">Login</button>
           <button className="btn-secondary flex items-center justify-center gap-x-2">
             <AiFillGithub /> GitHub
           </button>
