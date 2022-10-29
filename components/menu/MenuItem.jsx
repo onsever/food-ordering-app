@@ -1,13 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import { RiShoppingCart2Fill } from "react-icons/ri";
+import Link from "next/link";
 
 const MenuItem = () => {
   return (
     <div className="bg-secondary text-white rounded-3xl">
       <div className="flex items-center justify-center w-full bg-[#f1f2f3] p-6 rounded-bl-[2.8rem] rounded-br-[2.8rem] rounded-tl-2xl rounded-tr-2xl">
         <div className="relative w-36 h-36 transition-all hover:scale-110">
-          <Image src="/images/f1.png" alt="Product Image" layout="fill" />
+          <Link href="/product">
+            <Image src="/images/f1.png" alt="Product Image" layout="fill" className="cursor-pointer" />
+          </Link>
         </div>
       </div>
       <div className="p-6">
