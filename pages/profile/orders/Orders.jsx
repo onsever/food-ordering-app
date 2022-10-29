@@ -4,7 +4,7 @@ import Title from "../../../components/ui/Title";
 const Orders = () => {
     return (
         <div className="w-full">
-            <Title className="text-[2.5rem] mb-4 md:text-left text-center">Account Settings</Title>
+            <Title className="text-[2.5rem] mb-4 md:text-left text-center">My Orders</Title>
             <div className="flex items-center justify-start w-full my-4 overflow-scroll">
                 <table className="w-full text-sm text-center text-gray-500">
                     <thead className="text-xs text-primary uppercase bg-gray-700">
