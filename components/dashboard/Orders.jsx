@@ -3,7 +3,7 @@ import Title from "../ui/Title";
 
 const Orders = () => {
     return (
-        <div className="w-full overflow-scroll">
+        <div className="w-full overflow-x-scroll">
             <Title className="text-[2.5rem] mb-4 md:text-left text-center">Orders Table</Title>
             <div className="flex items-center justify-start w-full my-4 overflow-scroll">
                 <table className="w-full text-sm text-center text-gray-500">

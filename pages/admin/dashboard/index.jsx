@@ -4,12 +4,10 @@ import {
     MdOutlineExitToApp,
 } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
-import { CgWebsite } from "react-icons/cg";
 import { AiOutlineShoppingCart, AiOutlineUnorderedList } from "react-icons/ai";
 import Products from "../../../components/dashboard/Products";
 import Orders from "../../../components/dashboard/Orders";
 import Categories from "../../../components/dashboard/Categories";
-import Footer from "../../../components/dashboard/Footer";
 
 const Index = () => {
     const [handleTabs, setHandleTabs] = useState(0);
@@ -35,10 +33,6 @@ const Index = () => {
                         <span>Categories</span>
                     </li>
                     <li className={`flex items-center gap-x-2 py-2 pl-2 border text-lg cursor-pointer hover:bg-primary hover:text-white transition-all hover:border-primary border-l-0 border-r-0 ${handleTabs === 3 ? "bg-primary text-white" : "bg-white text-black"}`} onClick={() => setHandleTabs(3)}>
-                        <CgWebsite />
-                        <span>Footer</span>
-                    </li>
-                    <li className={`flex items-center gap-x-2 py-2 pl-2 border text-lg cursor-pointer hover:bg-primary hover:text-white transition-all hover:border-primary border-l-0 border-r-0 ${handleTabs === 4 ? "bg-primary text-white" : "bg-white text-black"}`} onClick={() => setHandleTabs(4)}>
                         <MdOutlineExitToApp />
                         <span>Log Out</span>
                     </li>
@@ -47,7 +41,6 @@ const Index = () => {
             {handleTabs === 0 && <Products />}
             {handleTabs === 1 && <Orders />}
             {handleTabs === 2 && <Categories />}
-            {handleTabs === 3 && <Footer />}
         </div>
     );
 };

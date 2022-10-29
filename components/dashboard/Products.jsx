@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Products = () => {
     return (
-        <div className="w-full overflow-scroll">
+        <div className="w-full overflow-x-scroll">
             <div className="w-full flex items-center justify-between">
                 <Title className="text-[2.5rem] mb-4 md:text-left text-center">Edit Products</Title>
                 <button className="btn-secondary">Add a Product</button>
