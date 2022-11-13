@@ -7,13 +7,21 @@ import LayoutWrapper from "../components/layout/LayoutWrapper";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 
-function MyApp({ Component, pageProps }) {
+import { SessionProvider } from "next-auth/react";
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <Provider store={store}>
-        <LayoutWrapper>
-            <Component {...pageProps} />
-        </LayoutWrapper>
-    </Provider>
+    <SessionProvider session={session}>
+        <Provider store={store}>
+            <LayoutWrapper>
+                <ToastContainer />
+                <Component {...pageProps} />
+            </LayoutWrapper>
+        </Provider>
+    </SessionProvider>
   );
 }
 
