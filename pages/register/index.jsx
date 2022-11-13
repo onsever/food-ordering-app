@@ -5,13 +5,24 @@ import { registerInputs } from "../../public/data/inputs";
 import useInput from "../../hooks/useInput";
 import { registerSchema } from "../../schemas/schemas";
 import Link from "next/link";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Index = () => {
   const { formik, validatedInputs } = useInput(
     registerInputs,
     registerSchema,
     async (values, actions) => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      try {
+          const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/users/register`, values);
+
+          if (res.status === 200 || res.status === 201) {
+              toast.success("You have successfully registered.");
+          }
+      } catch (error) {
+          toast.error(error.response.data.message);
+          console.log(error.response);
+      }
       actions.resetForm();
     }
   );
