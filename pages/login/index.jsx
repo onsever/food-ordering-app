@@ -6,18 +6,29 @@ import useInput from "../../hooks/useInput";
 import { loginSchema } from "../../schemas/schemas";
 import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
+import { useSession, signIn } from "next-auth/react"
 
 const Index = () => {
+  const { data: session } = useSession();
+
   const { formik, validatedInputs } = useInput(
     loginInputs,
     loginSchema,
     async (values, actions) => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      actions.resetForm();
+      const { email, password } = values;
+      let options = {
+          redirect: false,
+          email,
+          password
+      };
+      const res = await signIn("credentials", options);
+      // actions.resetForm();
     }
   );
 
-  return (
+    console.log(session);
+
+    return (
     <div className="container mx-auto">
       <form
         className="flex flex-col items-center justify-center my-20 md:w-1/2 w-full mx-auto"
@@ -38,7 +49,7 @@ const Index = () => {
         </div>
         <div className="flex flex-col gap-y-3 mt-6 w-full">
           <button type="submit" className="btn-primary">Login</button>
-          <button className="btn-secondary flex items-center justify-center gap-x-2">
+          <button type="button" className="btn-secondary flex items-center justify-center gap-x-2" onClick={() => signIn("github")}>
             <AiFillGithub /> GitHub
           </button>
           <Link href="/register">
